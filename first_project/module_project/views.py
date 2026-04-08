@@ -11,30 +11,30 @@ from .forms import CategoryForm, DisciplineForm
 # Категории 
 class CategoryListView(ListView):
     model = Category
-    template_name = 'module_project/category_list.html'
+    template_name = 'category_list.html'
     context_object_name = 'categories'
 
 class CategoryDetailView(DetailView):
     model = Category
-    template_name = 'module_project/category_detail.html'
+    template_name = 'category_detail.html'
 
 class CategoryCreateView(SuccessMessageMixin, CreateView):
     model = Category
     form_class = CategoryForm
-    template_name = 'module_project/category_form.html'
+    template_name = 'category_form.html'
     success_url = reverse_lazy('module_project:category_list')
     success_message = "Категория успешно создана."
 
 class CategoryUpdateView(SuccessMessageMixin, UpdateView):
     model = Category
     form_class = CategoryForm
-    template_name = 'module_project/category_form.html'
+    template_name = 'category_form.html'
     success_url = reverse_lazy('module_project:category_list')
     success_message = "Категория успешно обновлена."
 
 class CategoryDeleteView(DeleteView):
     model = Category
-    template_name = 'module_project/category_confirm_delete.html'
+    template_name = 'category_confirm_delete.html'
     success_url = reverse_lazy('module_project:category_list')
 
     def delete(self, request, *args, **kwargs):
@@ -44,7 +44,7 @@ class CategoryDeleteView(DeleteView):
 #  Дисциплины 
 class DisciplineListView(ListView):
     model = Discipline
-    template_name = 'module_project/discipline_list.html'
+    template_name = 'discipline_list.html'
     context_object_name = 'disciplines'
 
     def get_queryset(self):
@@ -62,25 +62,25 @@ class DisciplineListView(ListView):
 
 class DisciplineDetailView(DetailView):
     model = Discipline
-    template_name = 'module_project/discipline_detail.html'
+    template_name = 'discipline_detail.html'
 
 class DisciplineCreateView(SuccessMessageMixin, CreateView):
     model = Discipline
     form_class = DisciplineForm
-    template_name = 'module_project/discipline_form.html'
+    template_name = 'discipline_form.html'
     success_url = reverse_lazy('module_project:discipline_list')
     success_message = "Дисциплина успешно добавлена."
 
 class DisciplineUpdateView(SuccessMessageMixin, UpdateView):
     model = Discipline
     form_class = DisciplineForm
-    template_name = 'module_project/discipline_form.html'
+    template_name = 'discipline_form.html'
     success_url = reverse_lazy('module_project:discipline_list')
     success_message = "Дисциплина успешно обновлена."
 
 class DisciplineDeleteView(DeleteView):
     model = Discipline
-    template_name = 'module_project/discipline_confirm_delete.html'
+    template_name = 'discipline_confirm_delete.html'
     success_url = reverse_lazy('module_project:discipline_list')
 
     def delete(self, request, *args, **kwargs):

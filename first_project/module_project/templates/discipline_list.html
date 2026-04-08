@@ -1,4 +1,4 @@
-{% extends 'module_project/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 <h1>Дисциплины конного спорта</h1>
@@ -29,7 +29,7 @@
 </div>
 
 <div id="disciplinesContainer">
-    {% include 'module_project/disciplines_table.html' with disciplines=disciplines %}
+    {% include 'disciplines_table.html' with disciplines=disciplines %}
 </div>
 
 <div id="quickViewModal" class="modal" style="display: none;">
