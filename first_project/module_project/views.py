@@ -133,4 +133,8 @@ def discipline_quick_view(request, pk):
 def interactive_horse(request):
     return render(request, 'interactive_horse.html')
 
+#для кориды
+def bullfight_game(request):
+    return render(request, 'bullfight_game.html')
+
 

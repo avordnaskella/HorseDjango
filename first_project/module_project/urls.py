@@ -24,4 +24,7 @@ urlpatterns = [
     
     # для анимации
     path('interactive-horse/', views.interactive_horse, name='interactive_horse'),
+
+    #для игры
+    path('bullfight-game/', views.bullfight_game, name='bullfight_game'),
 ]
