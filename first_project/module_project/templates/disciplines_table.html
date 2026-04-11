@@ -2,6 +2,7 @@
     <table class="table table-striped table-hover">
         <thead>
             <tr>
+                <th>Изображение</th> 
                 <th>Название</th>
                 <th>Категория</th>
                 <th>Сложность</th>
@@ -12,6 +13,15 @@
         </thead>
         <tbody>
             {% for discipline in disciplines %}
+             <tr>
+              
+                <td>
+                    {% if discipline.image %}
+                        <img src="{{ discipline.image.url }}" width="50" height="50" style="object-fit: cover; border-radius: 4px;">
+                    {% else %}
+                        —
+                    {% endif %}
+                </td>
             <tr>
                 <td><a href="{{ discipline.get_absolute_url }}">{{ discipline.name }}</a></td>
                 <td>{{ discipline.category.name }}</td>

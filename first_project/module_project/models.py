@@ -36,6 +36,7 @@ class Discipline(models.Model):
         verbose_name="Категория"
     )
     description = models.TextField(blank=True, verbose_name="Описание")
+    image = models.ImageField(upload_to='disciplines/', blank=True, null=True, verbose_name="Изображение")
     difficulty = models.CharField(
         max_length=20,
         choices=DIFFICULTY_CHOICES,
@@ -44,6 +45,8 @@ class Discipline(models.Model):
     )
     is_olympic = models.BooleanField(default=False, verbose_name="Олимпийский вид")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
+
+    
 
     class Meta:
         verbose_name = "Дисциплина"

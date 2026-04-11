@@ -18,7 +18,7 @@ class CategoryForm(forms.ModelForm):
 class DisciplineForm(forms.ModelForm):
     class Meta:
         model = Discipline
-        fields = ['name', 'category', 'description', 'difficulty', 'is_olympic']
+        fields = ['name', 'category', 'description', 'image', 'difficulty', 'is_olympic']
         widgets = {
             'description': forms.Textarea(attrs={'rows': 3}),
         }

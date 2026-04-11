@@ -2,6 +2,9 @@
 
 {% block content %}
 <h1>{{ discipline.name }}</h1>
+{% if discipline.image %}
+    <img src="{{ discipline.image.url }}" class="img-fluid mb-3" alt="{{ discipline.name }}" style="max-width: 100%; border-radius: 8px;">
+{% endif %}
 <p><strong>Категория:</strong> {{ discipline.category.name }}</p>
 <p><strong>Сложность:</strong> {{ discipline.get_difficulty_display }}</p>
 <p><strong>Олимпийский вид:</strong> {% if discipline.is_olympic %}Да{% else %}Нет{% endif %}</p>
