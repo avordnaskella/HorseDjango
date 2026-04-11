@@ -137,4 +137,8 @@ def interactive_horse(request):
 def bullfight_game(request):
     return render(request, 'bullfight_game.html')
 
+#для видео
+def video_page(request):
+    return render(request, 'video_page.html')
+
 

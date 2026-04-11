@@ -27,4 +27,7 @@ urlpatterns = [
 
     #для игры
     path('bullfight-game/', views.bullfight_game, name='bullfight_game'),
+
+    #для видео
+    path('video/', views.video_page, name='video_page'),
 ]
