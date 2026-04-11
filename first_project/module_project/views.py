@@ -129,5 +129,8 @@ def discipline_quick_view(request, pk):
     }
     return JsonResponse(data)
 
+ # для анимации
+def interactive_horse(request):
+    return render(request, 'interactive_horse.html')
 
 

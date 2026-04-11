@@ -21,4 +21,7 @@ urlpatterns = [
     # API
     path('api/disciplines/filter/', views.filter_disciplines, name='filter_disciplines'),
     path('api/disciplines/<int:pk>/quick/', views.discipline_quick_view, name='discipline_quick_view'),
+    
+    # для анимации
+    path('interactive-horse/', views.interactive_horse, name='interactive_horse'),
 ]
