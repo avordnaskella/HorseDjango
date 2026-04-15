@@ -7,8 +7,11 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt gunicorn whitenoise psycopg2-binary
 
-# Копируем ВСЁ содержимое папки first_project в /app
-COPY first_project/ .
+# Копируем ВСЁ содержимое репозитория (а не только first_project)
+COPY . .
+
+# Переходим в папку first_project, где лежит manage.py
+WORKDIR /app/first_project
 
 # Собираем статику
 RUN python manage.py collectstatic --noinput
