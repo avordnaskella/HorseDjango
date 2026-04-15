@@ -2,12 +2,12 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Копируем requirements.txt из корня
+# Копируем requirements.txt из корня репозитория
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt gunicorn whitenoise psycopg2-binary
 
-# Копируем весь код из папки first_project
+# Копируем ВСЁ содержимое папки first_project в /app
 COPY first_project/ .
 
 # Собираем статику
